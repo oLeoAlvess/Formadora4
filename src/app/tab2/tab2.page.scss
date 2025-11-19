@@ -1,0 +1,59 @@
+// Define as variáveis de cores para esta página
+@import "src/theme/variables.scss";
+
+ion-content {
+    --ion-background-color: var(--ion-color-light);
+
+    h3 {
+        margin-left: 15px;
+        color: var(--ion-color-primary);
+    }
+
+    ion-card {
+        margin: 15px;
+        cursor: pointer;
+        transition: transform 0.2s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        
+        // Efeito visual ao tocar/passar o mouse (melhora UX)
+        &:hover {
+            transform: translateY(-2px);
+        }
+
+        ion-card-header {
+            padding-bottom: 0;
+
+            ion-card-title {
+                color: var(--ion-color-primary);
+                font-size: 1.1em;
+                font-weight: 600;
+            }
+        }
+
+        ion-card-content {
+            padding-top: 5px;
+            color: #444;
+        }
+    }
+
+    .quiz-button {
+        margin: 30px 15px;
+        --padding-top: 15px;
+        --padding-bottom: 15px;
+        font-weight: bold;
+    }
+}
+
+.modal {
+        --background: var(--ion-color-light);
+        --border-radius: 12px;
+        /* usar cor escura do tema para o texto do modal para garantir contraste */
+        --color: var(--ion-color-dark);
+        font-size: large;
+}
+
+/* Forçar cor do conteúdo renderizado via innerHTML dentro do modal */
+.modal .modal-content,
+.modal .modal-content div {
+    color: var(--ion-color-dark) !important;
+}

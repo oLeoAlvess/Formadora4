@@ -1,0 +1,84 @@
+// Define as variáveis de cores para esta página
+@import "src/theme/variables.scss";
+
+ion-content {
+    --ion-background-color: var(--ion-color-light);
+    
+    .question-counter {
+        text-align: center;
+        font-weight: 600;
+        color: var(--ion-color-primary);
+        margin-bottom: 20px;
+        font-size: 1.1em;
+    }
+
+    ion-card {
+        margin: 15px 15px 30px;
+        background-color: var(--ion-color-tertiary); // Fundo para destaque da pergunta
+        color: #111; // Texto escuro para alto contraste
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.979);
+    }
+
+    .quiz-option {
+        margin-bottom: 10px;
+        --padding-start: 0;
+        --inner-padding-end: 0;
+        --color: white;
+        
+        
+        .option-button {
+            --color: #0066ff; // Força o texto escuro no botão light
+            --background: rgba(0, 0, 0, 0);
+            --border-radius: 25px;
+            --box-shadow: none;
+            text-align: left;
+            white-space: normal;
+            height: auto;
+            padding: 15px 15px;
+            font-size: 1em;
+        }
+    }
+
+    .feedback-container {
+        text-align: center;
+        margin: 30px 15px 0;
+        
+        p {
+            font-size: 1.3em;
+            padding-bottom: 10px;
+        }
+    }
+
+    .correct-feedback {
+        color: var(--ion-color-success);
+        font-weight: bold;
+    }
+
+    .incorrect-feedback {
+        color: var(--ion-color-danger, #eb445a); // Vermelho para erro
+        font-weight: bold;
+    }
+
+    .results-container {
+        text-align: center;
+        padding: 20px;
+
+        .score {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--ion-color-primary);
+            margin-bottom: 20px;
+        }
+
+        .final-message-card {
+            margin-bottom: 30px;
+            background: var(--ion-color-success);
+            color: #fff;
+            
+            h4 {
+                font-weight: 700;
+                font-size: 1.2em;
+            }
+        }
+    }
+}

@@ -1,17 +1,57 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Quiz - Teste seu Conhecimento</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding quiz-content">
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div *ngIf="!quizFinished">
+    <p class="question-counter">Pergunta {{ currentQuestionIndex + 1 }} de {{ questions.length }}</p>
+    
+    <ion-card color="tertiary">
+      <ion-card-header>
+        <ion-card-title>Q: {{ currentQuestion.text }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    
+      <ion-item *ngFor="let option of currentQuestion.options; let i = index" class="quiz-option" [class.selected]="selectedAnswerIndex === i" color="light">
+        <ion-button expand="block"
+                    
+                    (click)="answerQuestion(i)"
+                    [disabled]="answerSelected"
+                    [class.selected]="selectedAnswerIndex === i"
+                    class="option-button"
+                    [attr.aria-pressed]="selectedAnswerIndex === i">
+          {{ option }}
+        </ion-button>
+      </ion-item>
+    
+
+    <div *ngIf="answerSelected" class="feedback-container">
+      <p [class]="isCorrect ? 'correct-feedback' : 'incorrect-feedback'" aria-live="polite">
+        {{ isCorrect ? '✅ Resposta Correta!' : '❌ Resposta Incorreta.' }}
+      </p>
+      <ion-button expand="block" color="secondary" (click)="nextQuestion()">
+        {{ isCorrect ? 'Próxima Pergunta' : 'Continuar' }}
+      </ion-button>
+    </div>
+  </div>
+
+  <div *ngIf="quizFinished" class="results-container">
+    <h2>Quiz Finalizado!</h2>
+    <p class="score">Sua Pontuação: {{ score }} / {{ questions.length }}</p>
+    
+    <ion-card color="success" class="final-message-card">
+      <ion-card-content>
+        <h4>Parabéns pela sua Cidadania Digital!</h4>
+        <p>Proteger seus dados é um ato de responsabilidade social e um direito fundamental. Mantenha-se informado!</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="full" (click)="goToHome()" color="medium" class="back-home-button">
+      Voltar para o Início
+    </ion-button>
+  </div>
 </ion-content>

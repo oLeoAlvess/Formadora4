@@ -1,17 +1,24 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="">
+    <ion-title>Bem-vindo</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding home-page-content">
+  <div class="logo-container">
+    <ion-icon name="shield-checkmark-outline" class="app-icon" aria-label="Escudo com cadeado, representando segurança"></ion-icon>
+    <h1>InfoCidadão</h1>
+    <h2>Seu Guia de Cidadania Digital e LGPD</h2>
+  </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <p class="description-text">
+    Aprenda sobre a Lei Geral de Proteção de Dados (LGPD), seus direitos digitais e as melhores práticas para proteger suas informações pessoais.
+  </p>
+
+  <ion-button expand="full" color="success" (click)="goToContent()" class="start-button">
+    INICIAR JORNADA
+    <ion-icon slot="end" name="arrow-forward"></ion-icon>
+  </ion-button>
+
+  
 </ion-content>

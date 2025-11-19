@@ -1,17 +1,62 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Conteúdo Essencial</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <h3>Selecione um tópico para saber mais:</h3>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>1. O que é a LGPD?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Entenda o objetivo da Lei Geral de Proteção de Dados e o que ela muda.</p>
+    </ion-card-content>
+    <ion-button expand="clear" fill="clear" (click)="getTopic('lgpd')">Clique aqui para Saber mais</ion-button>
+  </ion-card>
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>2. Seus Direitos Digitais</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Conheça seus direitos de Acesso, Retificação e Eliminação de dados.</p>
+    </ion-card-content>
+    <ion-button expand="clear" fill="clear" (click)="getTopic('direitos')">Clique aqui para Saber mais</ion-button>
+  </ion-card>
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>3. Dicas de Segurança Prática</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Aprenda a criar senhas fortes, identificar phishing e proteger seu celular.</p>
+    </ion-card-content>
+    <ion-button expand="clear" fill="clear" (click)="getTopic('dicas')">Clique aqui para Saber mais</ion-button>
+  </ion-card>
+
+  <ion-button expand="full" color="warning" (click)="goToQuiz()" class="quiz-button">
+    TESTE SEU CONHECIMENTO (QUIZ)
+  </ion-button>
+
+  <!-- Modal único controlado localmente (sincronizado com TopicModalService) -->
+  <ion-modal [isOpen]="isModalOpen" class="modal">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button fill="clear" (click)="closeModal()" aria-label="Fechar">
+              <ion-icon name="close"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-title>{{ modalTitle }}</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding modal-content">
+        <div [innerHTML]="modalContent"></div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>
