@@ -1,2 +1,38 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+
+// Tema e variáveis compartilhadas da aplicação
+// As variáveis abaixo definem as cores principais usadas pelo app.
+// Ajuste os valores conforme a identidade visual desejada.
+
+:root {
+	/* Cores principais */
+	--ion-color-primary: #0b5fa5; /* Azul principal */
+	--ion-color-primary-contrast: #ffffff;
+	--ion-color-primary-shade: #094f88;
+	--ion-color-primary-tint: #2a79c1;
+
+	--ion-color-secondary: #ffb400; /* Amarelo / destaque */
+	--ion-color-secondary-contrast: #000000;
+
+	--ion-color-tertiary: #ffdcae;
+
+	--ion-color-success: #2ecc71;
+	--ion-color-danger: #eb445a;
+
+	--ion-color-light: #f7f8fa;
+	--ion-color-medium: #9a9a9a;
+	--ion-color-dark: #222428;
+
+	/* Tipografia */
+	--ion-font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Também exportamos um mapa Sass para usos em componentes SCSS, se necessário */
+$colors: (
+	primary: var(--ion-color-primary),
+	secondary: var(--ion-color-secondary),
+	tertiary: var(--ion-color-tertiary),
+	success: var(--ion-color-success),
+	danger: var(--ion-color-danger),
+	light: var(--ion-color-light),
+	dark: var(--ion-color-dark),
+);

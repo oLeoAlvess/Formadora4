@@ -35,3 +35,35 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+/* Utilitários globais do app */
+/* Pequenas classes utilitárias e helpers de acessibilidade */
+.visually-hidden {
+	position: absolute !important;
+	height: 1px; width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.app-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* Botões com ícone à direita */
+.btn-icon-right ion-icon {
+	margin-left: 8px;
+}
+
+/* Pequeno helper para foco acessível */
+:focus {
+	outline: 3px solid rgba(11,95,165,0.18);
+	outline-offset: 2px;
+}
+

@@ -1,0 +1,62 @@
+// Define as variáveis de cores para esta página, usando as cores globais do Ionic
+@import "src/theme/variables.scss";
+
+// Estilização do ícone e do texto
+ion-content {
+    --ion-background-color: var(--ion-color-light); // Fundo claro para contraste
+
+    .home-page-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%; // Garante que o conteúdo ocupe toda a altura
+    }
+
+    .logo-container {
+        margin-bottom: 40px;
+        padding: 0 20px;
+
+        h1 {
+            color: var(--ion-color-primary); // Azul Marinho (Confiança)
+            font-weight: 700;
+            font-size: 2.2em;
+            margin-bottom: 5px;
+        }
+
+        /* Ajuste para melhorar contraste em fundos claros */
+        h2 {
+            color: rgba(0,0,0,0.6);
+            font-size: 1.1em;
+            margin-top: 0;
+        }
+    }
+
+    .app-icon {
+        font-size: 100px;
+        color: var(--ion-color-primary);
+        margin-bottom: 10px;
+    }
+
+    .description-text {
+        font-size: 1.1em;
+        color: rgba(0,0,0,0.8);
+        margin: 0 20px 50px;
+        line-height: 1.5;
+    }
+
+    .start-button {
+        --padding-top: 15px;
+        --padding-bottom: 15px;
+        font-weight: bold;
+        font-size: 1.05em;
+        margin: 0 20px 20px;
+    }
+
+    .footer-note {
+        margin-top: auto; // Empurra para o final da tela
+        padding: 10px 0;
+        font-size: 0.8em;
+        color: #777;
+    }
+}
