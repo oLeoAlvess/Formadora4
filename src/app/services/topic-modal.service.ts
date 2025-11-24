@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-
 @Injectable({ providedIn: 'root' })
 export class TopicModalService {
   private isOpenSubject = new BehaviorSubject<boolean>(false);
@@ -12,7 +11,6 @@ export class TopicModalService {
   readonly title$ = this.titleSubject.asObservable();
   readonly content$ = this.contentSubject.asObservable();
 
-  
   // Retorna o conteúdo de um tópico sem alterar o estado do modal.
   getTopic(topic: 'lgpd' | 'direitos' | 'dicas') {
     const topics: Record<string, { title: string; content: string }> = {
@@ -20,38 +18,94 @@ export class TopicModalService {
         title: 'O que é a LGPD?',
         content: `
           <h4>O que é a LGPD?</h4>
-          <p>A Lei Geral de Proteção de Dados (LGPD) regula a coleta, uso, armazenamento e tratamento de dados pessoais no Brasil. Seu objetivo é proteger a privacidade e os direitos dos titulares, exigindo transparência e segurança por parte de empresas e organizações.</p>
-
-          <h5>Principais pontos</h5>
-          <ul>
-            <li>Define regras sobre coleta, armazenamento, compartilhamento e exclusão de dados.</li>
-            <li>Garante direitos aos titulares (acesso, correção, exclusão, portabilidade).</li>
-            <li>Exige medidas de segurança e responsabilidade no tratamento de dados.</li>
-          </ul>
-
-          <p>Em resumo, a LGPD busca evitar abusos e promover um tratamento responsável e transparente das informações pessoais.</p>
+          <p>A Lei Geral de Proteção de Dados (LGPD), instituída pela Lei nº 13.709/2018, é o marco regulatório brasileiro que estabelece regras, princípios e deveres para o tratamento de dados pessoais em todo o território nacional. Inspirada em legislações internacionais como o GDPR europeu, a LGPD surge para garantir que indivíduos tenham mais controle sobre suas informações e para promover transparência e responsabilidade no uso desses dados por empresas, órgãos públicos e demais organizações.</p>
+          <p>A LGPD define dado pessoal como qualquer informação capaz de identificar uma pessoa natural — seja diretamente, como nome e CPF, seja indiretamente, como localização, histórico de navegação ou preferências de consumo. Além disso, também protege dados pessoais sensíveis, como informações de saúde, religião, origem racial e opinião política, que exigem cuidados ainda mais rigorosos devido ao seu potencial de causar discriminação ou danos individuais.</p>
+          <p>O principal objetivo da lei é proteger os direitos fundamentais de liberdade, privacidade e autodeterminação informativa, garantindo que o uso de dados seja feito de forma lícita, segura e necessária. Para isso, a LGPD estabelece princípios como finalidade, necessidade, transparência, segurança e prevenção — cada um orientando empresas e instituições a tratar informações de maneira responsável e proporcional.</p>
+          <p>A lei também cria direitos inéditos para os cidadãos, como o direito de acessar seus dados, solicitar correção, portar informações para outros serviços, retirar consentimento e até pedir a eliminação de dados quando forem desnecessários. Já para as organizações, a LGPD impõe a obrigação de adotar medidas técnicas e administrativas para proteger os dados, comunicar incidentes de segurança e manter práticas de governança que assegurem a conformidade.</p>
+          <p>Por fim, a Autoridade Nacional de Proteção de Dados (ANPD) foi instituída como o órgão responsável por fiscalizar, orientar e aplicar sanções em caso de descumprimento da lei. As penalidades vão desde advertências até multas que podem alcançar R$ 50 milhões por infração, além de bloqueio ou eliminação de dados.</p>
+          <p>Em resumo, a LGPD representa um avanço significativo na proteção da privacidade no Brasil. Ela estabelece um equilíbrio essencial entre inovação e segurança, conferindo aos cidadãos maior poder sobre suas informações e incentivando as organizações a adotarem práticas mais éticas, transparentes e seguras no tratamento de dados pessoais.</p>
         `,
       },
       direitos: {
         title: 'Seus Direitos Digitais',
         content: `
           <h4>Seus Direitos Digitais</h4>
-          <p>Os direitos digitais estendem direitos fundamentais ao ambiente online, garantindo uso seguro, livre e transparente das tecnologias.</p>
+          <p>Os direitos digitais garantem proteção, privacidade, liberdade e segurança para todos que utilizam a internet. Eles são essenciais em um mundo onde quase tudo envolve dados — desde redes sociais até bancos e aplicativos.</p>
 
           <ol>
-            <li><strong>Direito à privacidade</strong> — manter seus dados pessoais protegidos; uso apenas com autorização ou explicação clara.</li>
-            <li><strong>Direito à proteção de dados</strong> — tratamento seguro, prevenção de vazamentos e uso indevido.</li>
-            <li><strong>Direito ao acesso à informação</strong> — entender como serviços e plataformas tratam dados e tomar decisões informadas.</li>
-            <li><strong>Direito à liberdade de expressão</strong> — manifestar-se sem censura injustificada, respeitando leis e direitos alheios.</li>
-            <li><strong>Direito de exclusão</strong> (direito ao esquecimento) — em determinados casos, solicitar remoção de conteúdos prejudiciais ou incorretos.</li>
-            <li><strong>Direito à segurança digital</strong> — navegação em ambientes protegidos contra fraudes e ataques.</li>
-            <li><strong>Direito ao acesso à internet</strong> — acesso considerado essencial para cidadania e educação.</li>
-            <li><strong>Neutralidade da rede</strong> — tratamento igualitário de dados na internet.</li>
-            <li><strong>Direito à transparência</strong> — saber como plataformas usam seus dados e operam algoritmos.</li>
-            <li><strong>Portabilidade de dados</strong> — transferir seus dados entre serviços quando necessário.</li>
-          </ol>
+            <li>
+            <strong>Direito à privacidade</strong> — A privacidade digital significa que o usuário tem controle sobre aquilo que compartilha e sobre como suas informações são tratadas.
+            <p>Explicando mais:</p>
+            <p> - Esse direito assegura que seus dados não podem ser coletados, usados ou vendidos sem que você saiba.</p>
+            <p> - Empresas devem pedir permissão clara (consentimento).</p>
+            <p> - Você também pode optar por não fornecer certos dados, sem ser prejudicado injustamente.</p>
+            <p> - A privacidade impede rastreamentos indevidos e monitoramento abusivo.</p>
+            <p> - Na prática, garante que você tenha intimidade e anonimato, se desejar.</p>
+            </li>
 
-          <p>Esses direitos ajudam você a manter controle sobre suas informações e a exigir práticas responsáveis das empresas.</p>
+            <li>
+            <strong> Direito à Proteção de Dados Pessoais</strong> — Esse direito garante que seus dados sejam mantidos seguros, organizados e protegidos contra uso indevido.
+            <p>Entendendo melhor:</p>
+            <p> - Você pode solicitar acesso ao que uma empresa sabe sobre você.</p>
+            <p> - Pode pedir correção de informações erradas.</p>
+            <p> - Pode exigir que a empresa apague seus dados quando eles não forem mais necessários.</p>
+            <p> - É possível mudar de ideia e retirar o consentimento.</p>
+            <p>A LGPD define regras rígidas para obrigar empresas a cuidarem desses dados com responsabilidade, aplicando medidas como criptografia, limitação de acesso e auditorias.</p>
+            </li>
+
+            <li>
+            <strong>Direito à Liberdade de Expressão</strong> — Na internet, você tem o direito de se expressar, opinar e compartilhar informações.
+            <p>Mas com limites importantes:</p>
+            <p> - Não protege discursos de ódio, difamação ou ameaças.</p>
+            <p> - Plataformas podem remover conteúdos que violem regras, mas não podem censurar opiniões legítimas.</p>
+            <p> - O Marco Civil assegura que o governo não pode restringir opiniões arbitrariamente.</p>
+            <p>O Marco Civil assegura que o governo não pode restringir opiniões arbitrariamente.</p>
+            </li>
+
+            <li>
+            <strong>Direito à Segurança Digital</strong> — O direito à segurança significa que usuários devem navegar em ambientes digitais que reduzam ao máximo riscos como fraudes, invasões e vazamentos.
+            <p>Aprofundando:</p>
+            <p> - Empresas precisam implementar mecanismos de segurança (como firewall, 2FA e criptografia).</p>
+            <p> - Elas também devem comunicar imediatamente incidentes de vazamento.</p>
+            <p> - O usuário tem o direito de ser protegido contra golpes e práticas maliciosas.</p>
+            <p> - Políticas de segurança precisam ser claras e acessíveis.</p>
+            <p>Esse direito visa impedir que você seja exposto a riscos que poderiam ser evitados com boas práticas tecnológicas.</p>
+            </li>
+
+            <li>
+            <strong>Direito ao Acesso à Informação e à Inclusão Digital</strong> — A internet deve ser acessível e livre para todos.
+            <p>Significa que:</p>
+            <p> - Pessoas devem ter acesso democrático à internet, sem discriminação.</p>
+            <p> - Conteúdos devem ser claros, compreensíveis e acessíveis (inclusive para pessoas com deficiência).</p>
+            <p> - A neutralidade da rede deve ser respeitada: provedores não podem bloquear sites ou favorecê-los.</p>
+            <p> - Informações públicas devem ser divulgadas de forma transparente.</p>
+            <p>Esse direito garante que a internet funcione como ferramenta de conhecimento e igualdade.</p>
+            </li>
+
+            <li>
+            <strong>Direito à Transparência</strong> — Os usuários têm o direito de saber:
+            <p> - Por que seus dados estão sendo coletados</p>
+            <p> - Como serão usados</p>
+            <p> - Com quem serão compartilhados</p>
+            <p> - Por quanto tempo ficarão armazenados</p>
+            <p> - Quais riscos existem</p>
+            <p>Explicando melhor:</p>
+            <p>Transparência evita “pegadinhas” em políticas de privacidade, impede que empresas escondam práticas questionáveis e aumenta a confiança entre usuário e empresa.</p>
+            <p>Tudo deve ser informado de forma simples, e não com textos difíceis cheios de termos jurídicos.</p>
+            </li>
+
+            <li>
+            <strong>Direito ao Esquecimento</strong> — O direito ao esquecimento permite que uma pessoa solicite a remoção de conteúdos antigos que:
+            <p> - Não têm mais relevância pública.</p>
+            <p> - Prejudicam injustamente a pessoa.</p>
+            <p> - Não fazem parte da história atual dela.</p>
+            <p>Mas há um ponto importante:</p>
+            <p>Esse direito é aplicado com cautela no Brasil para evitar censura. Ele costuma ser considerado em situações onde o conteúdo traz prejuízo desproporcional à vida da pessoa e não tem mais utilidade pública.</p>
+            </li>
+
+
+
+
         `,
       },
       dicas: {
