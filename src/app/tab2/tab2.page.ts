@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonHeader, IonIcon, IonToolbar, IonTitle, IonContent, IonButtons, IonBackButton, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonModal, IonItem, IonInput } from '@ionic/angular/standalone';
+import { IonHeader, IonIcon, IonToolbar, IonTitle, IonContent, IonButtons, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonModal } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import { addIcons } from 'ionicons';
 import { arrowBack, close } from 'ionicons/icons';
@@ -10,7 +10,7 @@ import { TopicModalService } from '../services/topic-modal.service';
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss'],
-  imports: [CommonModule, IonHeader, IonIcon, IonToolbar, IonTitle, IonContent, IonButtons, IonBackButton, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonModal, IonItem, IonInput]
+  imports: [CommonModule, IonHeader, IonIcon, IonToolbar, IonTitle, IonContent, IonButtons, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonModal]
 })
 export class Tab2Page {
   isModalOpen = false;
