@@ -1,5 +1,5 @@
 // Define as variáveis de cores para esta página, usando as cores globais do Ionic
-@import "src/theme/variables.scss";
+@use "src/theme/variables.scss";
 
 // Estilização do ícone e do texto
 ion-content {

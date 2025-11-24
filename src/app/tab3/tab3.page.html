@@ -7,7 +7,7 @@
 <ion-content class="ion-padding quiz-content">
 
   <div *ngIf="!quizFinished">
-    <p class="question-counter">Pergunta {{ currentQuestionIndex + 1 }} de {{ questions.length }}</p>
+  <p class="question-counter">Pergunta {{ currentQuestionIndex + 1 }} de {{ totalQuestions }}</p>
     
     <ion-card color="tertiary">
       <ion-card-header>
@@ -41,17 +41,21 @@
 
   <div *ngIf="quizFinished" class="results-container">
     <h2>Quiz Finalizado!</h2>
-    <p class="score">Sua Pontuação: {{ score }} / {{ questions.length }}</p>
+  <p class="score">Sua Pontuação: {{ score }} / {{ totalQuestions }}</p>
     
-    <ion-card color="success" class="final-message-card">
+    <ion-card class="final-message-card" [color]="gradeTitle === 'Excelente!' ? 'success' : (gradeTitle === 'Precisa Melhorar' ? 'danger' : 'warning')">
       <ion-card-content>
-        <h4>Parabéns pela sua Cidadania Digital!</h4>
-        <p>Proteger seus dados é um ato de responsabilidade social e um direito fundamental. Mantenha-se informado!</p>
+        <h4>{{ gradeTitle }}</h4>
+        <p>{{ gradeMessage }}</p>
+        <!-- <p class="score">Sua Pontuação: {{ score }} / {{ questions.length }}</p> -->
       </ion-card-content>
     </ion-card>
 
     <ion-button expand="full" (click)="goToHome()" color="medium" class="back-home-button">
       Voltar para o Início
+    </ion-button>
+    <ion-button expand="full" color="primary" (click)="restartQuiz()" class="restart-quiz-button">
+      Reiniciar Quiz
     </ion-button>
   </div>
 </ion-content>

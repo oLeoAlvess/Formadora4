@@ -1,5 +1,5 @@
 // Define as variáveis de cores para esta página
-@import "src/theme/variables.scss";
+@use "src/theme/variables.scss";
 
 ion-content {
     --ion-background-color: var(--ion-color-light);
