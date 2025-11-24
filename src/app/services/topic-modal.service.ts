@@ -34,7 +34,7 @@ export class TopicModalService {
 
           <ol>
             <li>
-            <strong>Direito à privacidade</strong> — A privacidade digital significa que o usuário tem controle sobre aquilo que compartilha e sobre como suas informações são tratadas.
+            <strong>Direito à privacidade</strong> <p>— A privacidade digital significa que o usuário tem controle sobre aquilo que compartilha e sobre como suas informações são tratadas.</p>
             <p>Explicando mais:</p>
             <p> - Esse direito assegura que seus dados não podem ser coletados, usados ou vendidos sem que você saiba.</p>
             <p> - Empresas devem pedir permissão clara (consentimento).</p>
@@ -44,7 +44,7 @@ export class TopicModalService {
             </li>
 
             <li>
-            <strong> Direito à Proteção de Dados Pessoais</strong> — Esse direito garante que seus dados sejam mantidos seguros, organizados e protegidos contra uso indevido.
+            <strong> Direito à Proteção de Dados Pessoais</strong> <p>— Esse direito garante que seus dados sejam mantidos seguros, organizados e protegidos contra uso indevido.</p>
             <p>Entendendo melhor:</p>
             <p> - Você pode solicitar acesso ao que uma empresa sabe sobre você.</p>
             <p> - Pode pedir correção de informações erradas.</p>
@@ -54,7 +54,7 @@ export class TopicModalService {
             </li>
 
             <li>
-            <strong>Direito à Liberdade de Expressão</strong> — Na internet, você tem o direito de se expressar, opinar e compartilhar informações.
+            <strong>Direito à Liberdade de Expressão</strong> <p>— Na internet, você tem o direito de se expressar, opinar e compartilhar informações.</p>
             <p>Mas com limites importantes:</p>
             <p> - Não protege discursos de ódio, difamação ou ameaças.</p>
             <p> - Plataformas podem remover conteúdos que violem regras, mas não podem censurar opiniões legítimas.</p>
@@ -63,7 +63,7 @@ export class TopicModalService {
             </li>
 
             <li>
-            <strong>Direito à Segurança Digital</strong> — O direito à segurança significa que usuários devem navegar em ambientes digitais que reduzam ao máximo riscos como fraudes, invasões e vazamentos.
+            <strong>Direito à Segurança Digital</strong> <p>— O direito à segurança significa que usuários devem navegar em ambientes digitais que reduzam ao máximo riscos como fraudes, invasões e vazamentos.</p>
             <p>Aprofundando:</p>
             <p> - Empresas precisam implementar mecanismos de segurança (como firewall, 2FA e criptografia).</p>
             <p> - Elas também devem comunicar imediatamente incidentes de vazamento.</p>
@@ -73,7 +73,7 @@ export class TopicModalService {
             </li>
 
             <li>
-            <strong>Direito ao Acesso à Informação e à Inclusão Digital</strong> — A internet deve ser acessível e livre para todos.
+            <strong>Direito ao Acesso à Informação e à Inclusão Digital</strong> <p>— A internet deve ser acessível e livre para todos.</p>
             <p>Significa que:</p>
             <p> - Pessoas devem ter acesso democrático à internet, sem discriminação.</p>
             <p> - Conteúdos devem ser claros, compreensíveis e acessíveis (inclusive para pessoas com deficiência).</p>
@@ -83,7 +83,7 @@ export class TopicModalService {
             </li>
 
             <li>
-            <strong>Direito à Transparência</strong> — Os usuários têm o direito de saber:
+            <strong>Direito à Transparência</strong> <p>— Os usuários têm o direito de saber:</p>
             <p> - Por que seus dados estão sendo coletados</p>
             <p> - Como serão usados</p>
             <p> - Com quem serão compartilhados</p>
@@ -95,7 +95,7 @@ export class TopicModalService {
             </li>
 
             <li>
-            <strong>Direito ao Esquecimento</strong> — O direito ao esquecimento permite que uma pessoa solicite a remoção de conteúdos antigos que:
+            <strong>Direito ao Esquecimento</strong> <p>— O direito ao esquecimento permite que uma pessoa solicite a remoção de conteúdos antigos que:</p>
             <p> - Não têm mais relevância pública.</p>
             <p> - Prejudicam injustamente a pessoa.</p>
             <p> - Não fazem parte da história atual dela.</p>
